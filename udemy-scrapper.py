@@ -66,30 +66,8 @@ def print_Func(d):
     index = 1
     for l in d:
         if l != "":
-            #text_split = l.text
-            #splitted = text_split.splitlines()
-            #print(l.text)
-            #insertIntoDict("_id", index)
-            #insertIntoDict("Provider", "Coursera")
-            #insertIntoDict("Offered_By",splitted[0])
-            #insertIntoDict("Course_Name",splitted[1])
-            #insertIntoDict("Skills",splitted[2])
-            #if(is_float(splitted[3])):
-            #    duration= splitted[5].split('· ')
-            #    insertIntoDict("Ratings", splitted[3])
-            #    insertIntoDict("Duration",duration[2])
-            #else:
-            #    insertIntoDict("Ratings","None")
-            #    duration= splitted[3].split('· ')
-            #    insertIntoDict("Duration", duration[2])
-            #data.append(dict_data)
-            #dict_copy = dict_data.copy() 
-            #data.append(dict_copy)
-            #print(spli[0])
             print(l.text+"\n\n")
-            #print(link[j].get_attribute('href')+"\n\n")
-            #j+=1
-            #index = index+1
+           
         
     #for key,value in dict_data.items():
     #    print(key, value)
@@ -118,7 +96,7 @@ number_of_pages = int(driver.find_element(By.CSS_SELECTOR, "span[class='udlite-h
 for i in range (number_of_pages-1):
     myElem1 = WebDriverWait(driver, delay1).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div[class='course-card--main-content--2XqiY course-card--has-price-text--1c0ze']")))
     link_elem = driver.find_elements(By.CSS_SELECTOR, "div[class='course-card--main-content--2XqiY course-card--has-price-text--1c0ze']")
-#print(link_elem.text)
+    #print(link_elem.text)
     print_Func(link_elem)
 
     time.sleep(15)
